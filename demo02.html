@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>demo02</title>
+  <script
+      src="https://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous">
+  </script>
+</head>
+<body>
+<div class="box1">
+  <h1>hello world!</h1>
+</div>
+
+<script type="text/javascript">
+  function dom_text_html_test(){
+    const h1s = document.querySelectorAll(".box1 > h1");
+    console.log(h1s);
+  }
+
+  function  jq_text_html_test(){
+    console.log($(".box1").text());
+    console.log($(".box1").html());
+    $(".box1>h1").html('my name is yanyu');
+    $(".box1>h1").text('my name is yanyu');
+  }
+
+  dom_text_html_test();
+
+</script>
+</body>
+</html>
