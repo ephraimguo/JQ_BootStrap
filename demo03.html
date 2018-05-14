@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>replace</title>
+  <style>
+    div{
+      height: 200px;
+      width: 200px;
+      border: 1px solid black;
+    }
+    div:nth-child(1){
+      background-color: aqua;
+    }
+    div:nth-child(2){
+      background-color: blanchedalmond;
+    }
+  </style>
+  <script
+      src="https://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous">
+  </script>
+</head>
+<body>
+<h1>title1</h1>
+<h1>title2</h1>
+
+<script>
+
+  setTimeout(function(){
+    //replaceAll
+    $("<div></div>").replaceAll("h1:nth-child(1)");
+  }, 3000);
+
+  setTimeout(function(){
+    // $("h1").replaceWith("<div></div>")
+    $("h1")[1].replaceWith("<div></div>")
+  }, 4000);
+  //replaceWith
+</script>
+</body>
+</html>

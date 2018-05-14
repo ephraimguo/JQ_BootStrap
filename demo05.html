@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Properties Operation</title>
+  <script
+      src="https://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous">
+  </script>
+</head>
+<body>
+<input type="text" name="" value="">
+<select name="" id="">
+  <option value="A">A</option>
+  <option value="B">B</option>
+</select>
+<button type="button" name="button">read form data</button>
+
+<script>
+  function readFormData(){
+    console.log("input value = ",$("input").val());
+    console.log("select value = ", $("select").val());
+  }
+
+  $("button")[0].onclick = function(){
+    readFormData();
+  }
+
+
+</script>
+</body>
+</html>

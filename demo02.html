@@ -13,7 +13,9 @@
 <div class="box1">
   <h1>hello world!</h1>
 </div>
-
+<div class="box1">
+  <h1>hello world!</h1>
+</div>
 <script type="text/javascript">
   function dom_text_html_test(){
     const h1s = document.querySelectorAll(".box1 > h1");
@@ -23,11 +25,19 @@
   function  jq_text_html_test(){
     console.log($(".box1").text());
     console.log($(".box1").html());
-    $(".box1>h1").html('my name is yanyu');
+    // $(".box1>h1").html('my name is yanyu');
     $(".box1>h1").text('my name is yanyu');
   }
+  function append_boss(){
+    // let xiaodi = $("<p>xiaodi 01</p>", "<h3>小弟3</h3>");//小弟
+    let xiaodi4 = document.createElement("input");
+    $(".box1").prepend("<p>xiaodi 01</p>", "<h3>小弟3</h3>", xiaodi4,"<hr>");
+    // $(".box1").append("<p>xiaodi 01</p>", "<h3>小弟3</h3>", xiaodi4);
+  }
 
-  dom_text_html_test();
+  // dom_text_html_test();
+  // jq_text_html_test();
+  append_boss();
 
 </script>
 </body>
