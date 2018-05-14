@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>mouse</title>
+  <style>
+    .test{
+      width: 200px;
+      height: 200px;
+      border: 3px solid #cac;
+      box-sizing: content-box;
+      background: #777;
+    }
+    .sub{
+      width: 50px;
+      height: 50px;
+      background-color: aqua;
+    }
+  </style>
+  <script
+      src="https://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous">
+  </script>
+</head>
+<body>
+  <div class="test">
+    play!
+    <div class="sub"></div>
+  </div>
+
+
+  <script>
+    const log = console.log;
+    $('.test')
+      .contextmenu(e=>{e.preventDefault()})
+      .mousedown(e=>{log(e.type)})
+      .mouseup(e=>{log(e.type)})
+      .click(e=>{log(e.type)})
+      .dblclick(e=>{log(e.type)})
+      .mouseleave(e=>{log(e.type)})
+      // .hover(e=>{log(e.type)})
+      .mouseenter(e=>{log(e.type)})
+      .mouseout(e=>{log(e.type)})
+  </script>
+</body>
+</html>
